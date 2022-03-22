@@ -2,7 +2,6 @@
 from operator import index
 way,time = input("請輸入月租費型式及通話時間為: ").split(",")
 way1 = ['186','386','586','986']
-
 spend = [0.09 , 0.08, 0.07 , 0.06]
 discount1 = [0.9,0.8,0.7,0.6]
 discount2 = [0.8,0.7,0.6,0.5]
