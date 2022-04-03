@@ -16,9 +16,3 @@ else :
     print("最大出現次數為",b[rptm.index(max(rptm))])
     print()
     print("出現次數為",max(rptm))
-
-
-    
-
-    
-            

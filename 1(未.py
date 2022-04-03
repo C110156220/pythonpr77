@@ -1,8 +1,5 @@
 
 
-
-
-
 a = input("請輸入一個數字，判斷之中是否有最大質數:")
 for i in range(1):
     for j in range(1):
