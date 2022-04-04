@@ -1,3 +1,4 @@
+# 製作通訊錄
 name = []
 email = []
 n = int(input("請輸入幾筆資料"))
