@@ -1,14 +1,29 @@
+# 找出數字字串中的最大質數
+
+s = input("請輸入數字 : ")
+res = []
+for i in range(0,len(s)):
+    for j in range(i+1):
+        say = int(s[j:len(s)-i+j])
+        if say % 2 == 1 :
+            sayl = []
+            for k in range(1,say+1):
+                if say % k == 0 :
+                    sayl.append(k)
+            if len(sayl) == 2 : res.append(say)
+
+if len(res) == 0:
+    print("子字串中最大的質數是 : No prime found")
+else:
+    if len(res) == 1 and 1 in res:
+        print("子字串中最大的質數是 : No prime found")
+    else:
+        print("子字串中最大的質數是 : ",max(res))
 
 
-a = input("請輸入一個數字，判斷之中是否有最大質數:")
-for i in range(1):
-    for j in range(1):
-        c = a[:]
-        print(c)
-        d = 0
-        for k in range(1,int(c)+1):
-            if int(c) % k == 0 :
-                d += 1
-        if d == 2 : 
-            print("最高質數為",c)
-            break
+
+# 12345
+# 12345 --> s[0:5]
+# 1234 -->s[0:4] ; 2345 --> s[1:5]
+# 123 --> s[0:3] ; 234 --> s[1:4] ; 345 --> s[2:5]
+# 12 --> s[0:2] ; 23 --> s[1:3] ; 34 --> s[2:4] ;45 --> s[3:5]
